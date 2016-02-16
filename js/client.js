@@ -6,6 +6,9 @@ var ClusterModel = {
 		"video/cluster2.webm"
 	]),
 	"Handlers": {
+		"ready": function() {
+			document.getElementById("loader").className = "loader hidden";
+		},
 		"cycle": function() {
 			ClusterModel.Playlist().push(ClusterModel.Playlist().shift());
 		}
@@ -13,7 +16,7 @@ var ClusterModel = {
 	"Globals": {
 		"background": function() {
 			return m("div", { className: ClusterModel.Globals.BackgroundClass() }, [
-				m("video", { src: ClusterModel.Playlist()[0], autoplay: true, onended: ClusterModel.Handlers.cycle })
+				m("video", { src: ClusterModel.Playlist()[0], autoplay: true, onended: ClusterModel.Handlers.cycle, oncanplay: ClusterModel.Handlers.ready })
 			]);
 		},
 		"BackgroundClass": m.prop("bg"),
