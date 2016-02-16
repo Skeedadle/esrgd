@@ -1,0 +1,161 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700,800italic);
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a:active, a:focus {
+	outline: none;
+}
+
+.page {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.bg {
+	position: absolute;
+	z-index: -3;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	transition: opacity .3s;
+}
+
+.bg.fade {
+	opacity: .3;
+}
+
+.bg video {
+	width: 100%;
+}
+
+.content {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	font-family: 'Raleway', sans-serif;
+}
+
+.content .centre {
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+}
+
+.content .centre h1 {
+	font-weight: 800;
+	font-style: italic;
+	font-size: 70px;
+	text-transform: uppercase;
+	text-shadow: 4px 4px 0px #333;
+}
+
+.content .centre p {
+	text-shadow: 2px 2px 1px #333;
+	text-transform: uppercase;
+	font-size: 16px;
+	margin: 5px 0 40px;
+}
+
+.nav {
+	position: relative;
+	margin-top: 20px;
+}
+
+.nav a {
+	margin: 0 5px;
+	padding: 10px 5px;
+	width: 100px;
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	border: 2px solid #fff;
+	border-radius: 5px;
+	text-shadow: 2px 2px 1px #333;
+	box-shadow: 2px 2px 1px #333;
+	background: rgba(100, 100, 100, .7);
+	transition: background .25s, color .25s, text-shadow .25s;
+	text-transform: uppercase;
+}
+
+.nav a:hover {
+	background: #fff;
+	cursor: pointer;
+	text-shadow: none;
+	color: #000;
+}
+
+.content .box {
+	position: absolute;
+	background: #fff;
+	top: 50%;
+	left: 50%;
+	width: 900px;
+	height: 500px;
+	transform: translate(-50%, -50%);
+	padding: 5px 20px;
+	text-align: center;
+	border: 1px solid #111;
+}
+
+.alt .nav {
+	margin: 0;
+}
+
+.alt .nav a {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border-top: 0;
+	
+	text-align: center;
+}
+
+.errorpage {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #eee;
+}
+
+.errorpage .centre {
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+}
+
+.errorpage .centre h2 {
+	font-weight: 700;
+	font-size: 100px;
+	color: #111;
+}
+
+.errorpage .centre p {
+	margin: 10px 0;
+	color: #111;
+	font-size: 24px;
+}
+
+.errorpage .centre a {
+	font-size: 22px;
+	text-decoration: none;
+	transition: color .25s;
+}
+
+.errorpage .centre a:visited {
+	color: #0000ee;
+}
+
+.errorpage .centre a:hover {
+	color: #3388ee;
+}
