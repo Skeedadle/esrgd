@@ -16,7 +16,8 @@ var ClusterModel = {
 	"Globals": {
 		"background": function() {
 			return m("div", { className: ClusterModel.Globals.BackgroundClass() }, [
-				m("video", { src: ClusterModel.Playlist()[0], autoplay: true, onended: ClusterModel.Handlers.cycle, oncanplay: ClusterModel.Handlers.ready })
+				m("video", { src: ClusterModel.Playlist()[0], autoplay: true, onended: ClusterModel.Handlers.cycle, oncanplay: ClusterModel.Handlers.ready }),
+				m("video.preload", { src: ClusterModel.Playlist()[1], autoplay: false })
 			]);
 		},
 		"BackgroundClass": m.prop("bg"),

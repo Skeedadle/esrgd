@@ -32,6 +32,13 @@ a:active, a:focus {
 	width: 100%;
 }
 
+.bg video.preload {
+	position: absolute;
+	top: 200%;
+	width: 500px;
+	z-index: -1000;
+}
+
 .content {
 	position: relative;
 	width: 100%;
