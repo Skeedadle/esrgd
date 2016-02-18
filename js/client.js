@@ -6,9 +6,6 @@ var ClusterModel = {
 		"video/cluster2.webm"
 	]),
 	"Handlers": {
-		"ready": function() {
-			document.getElementById("loader").className = "loader hidden";
-		},
 		"cycle": function() {
 			ClusterModel.Playlist().push(ClusterModel.Playlist().shift());
 		}
@@ -16,7 +13,7 @@ var ClusterModel = {
 	"Globals": {
 		"background": function() {
 			return m("div", { className: ClusterModel.Globals.BackgroundClass() }, [
-				m("video", { src: ClusterModel.Playlist()[0], autoplay: true, onended: ClusterModel.Handlers.cycle, oncanplay: ClusterModel.Handlers.ready }),
+				m("video", { src: ClusterModel.Playlist()[0], autoplay: true, onended: ClusterModel.Handlers.cycle }),
 				m("video.preload", { src: ClusterModel.Playlist()[1], autoplay: false })
 			]);
 		},
@@ -28,8 +25,8 @@ var ClusterModel = {
 				m("a.btn", { href: "/buy", config: m.route }, "Buy"),
 				m("a.btn", { href: "/news", config: m.route } ,"News"),
 				m("a.btn", { target: "_blank", href: "https://reddit.com/r/HighwayFightSquad" }, "Reddit"),
-				m("a.btn", "Discord"),
-				m("a.btn", "Forums")
+				m("a.btn", { target: "_blank", href: "https://discord.gg/0mmEn8sRPpUikavZ" }, "Discord"),
+				m("a.btn", { target: "_blank", href: "https://forum.playclustertruck.com" }, "Forums")
 			]);
 		}
 	}
@@ -62,7 +59,26 @@ var ClusterPageAbout = {
 			ClusterModel.Globals.nav(),
 			m("div.box", [
 				m("h2", "About Clustertruck"),
-				m("p", "Clustertruck (originally known as Highway Fight Squad) was created by Winyl. Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends. Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.")
+				m("br"),
+				m("h3", "Description:"),
+				m("br"),
+				m("p", "The point of the game is to reach the end of each level without falling off trucks driven by terrible drivers. "),
+				m("p", "Playing the campaign mode will take the player on a Hollywoodesque journey through many different worlds where everything tries to kill them."),
+				m("p", "The game will also feature a fleshed out level editor and in-game steam workshop integration for sharing and browsing custom maps."),
+				m("br"),
+				m("h3", "Game features:"),
+				m("br"),
+				m("p", "100 unique levels"),
+				m("br"),
+				m("p", "10 different worlds"),
+				m("br"),
+				m("p", "An endless mode where you try to survive as long as possible"),
+				m("p", "In-game level editor"),
+				m("br"),
+				m("p", "Steam workshop integration"),
+				m("br"),
+				m("p", "A powerful replay system"),
+				
 			])
 		])
 	}

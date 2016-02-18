@@ -22,9 +22,15 @@ a:active, a:focus {
 	height: 100%;
 	overflow: hidden;
 	transition: opacity .3s;
+	background: url(../img/bg.png);
+	background-size: cover;
 }
 
 .bg.fade {
+	background: #fff;
+}
+
+.bg.fade video {
 	opacity: .3;
 }
 
@@ -87,7 +93,7 @@ a:active, a:focus {
 	border-radius: 5px;
 	text-shadow: 2px 2px 1px #333;
 	box-shadow: 2px 2px 1px #333;
-	background: rgba(100, 100, 100, .7);
+	background: rgba(63, 191, 191, .7);
 	transition: background .25s, color .25s, text-shadow .25s;
 	text-transform: uppercase;
 }
@@ -164,41 +170,6 @@ a:active, a:focus {
 
 .errorpage .centre a:hover {
 	color: #3388ee;
-}
-
-.loader {
-  position: fixed;
-  z-index: 500 !important;
-  width: 100%;
-  height: 100%;
-  background: #eee;
-}
-
-.loader.hidden {
-	display: none;
-}
-
-.loader svg .st0 {
-  fill: #eee;
-}
-
-.loader svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: 0.3s truck infinite;
-}
-
-.loader p {
-  font-family: sans-serif;
-  font-size: 11px;
-  text-transform: uppercase;
-  position: absolute;
-  bottom: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #777;
 }
 
 @keyframes truck {
